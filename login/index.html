@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bluebg">
+            <div class="signin box">
+                <h2>Don't have an account ?</h2>
+                <button class="signinBtn">Sign in</button>
+            </div>
+             <div class="signup box">
+                <h2>Already have an account ?</h2>
+                <button class="signupBtn">Log in</button>
+            </div>
+        </div>
+        <div class="formbx">
+            <div class="form signinform">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Enrolment no">
+                    <input type="text" placeholder="Branch">
+                    <input type="email" placeholder="Email id">
+                    <input type="text" placeholder="User Name">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="submit" value="Sign in">
+                </form>
+            </div>
+            <div class="form loginform">
+                <form action="#">
+                    <h1>Log in</h1>
+                    <input type="text" placeholder="Enrolment no">
+                    <input type="text" placeholder="User Name">
+                    <input type="password" placeholder="Password">
+                    <input class="loginbtn" type="submit" value="Log in">
+                    <a class="forget" href="#">Forgot Password?</a>
+                </form>
+            </div>
+    </div>
+</div>
+<script>
+    const signinBtn = document.querySelector('.signinBtn');
+    const signupBtn = document.querySelector('.signupBtn');
+    const formbx = document.querySelector('.formbx');
+    const body = document.querySelector('body')
+    signupBtn.onclick = function(){
+        formbx.classList.add('active')
+        body.classList.add('active')
+    }
+    signinBtn.onclick = function(){
+        formbx.classList.remove('active')
+        body.classList.remove('active')
+    } 
+    
+</script> 
+</body>
+</html>
+
+</body>
+</html>

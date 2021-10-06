@@ -1,0 +1,295 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.center{
+    position: absolute;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.center button{
+    border: none;
+    padding: 1em;
+    background-color: aqua;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    outline: none;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form a{
+    text-decoration: none;
+    color: #000
+}
+
+.blur.active2{
+    opacity: 1;
+	pointer-events: all;
+	transform: scale(1);
+}
+.blur{
+    position: fixed;
+	transform: scale(0);
+	opacity: 0;
+	z-index: 1;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	pointer-events: none;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	/* -webkit-filter: blur(15px);
+	-moz-filter:blur(15px);
+	filter: blur(15px); */
+	/* background-color: rgba(0, 0, 0, .7); */
+	-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+	/* backdrop-filter: url(commonfilters.svg#filter); */
+}
+.blur1.active12{
+    opacity: 1;
+	pointer-events: all;
+	transform: scale(1);
+}
+.blur1{
+    position: fixed;
+	transform: scale(0);
+	opacity: 0;
+	z-index: 1;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	pointer-events: none;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	/* -webkit-filter: blur(15px);
+	-moz-filter:blur(15px);
+	filter: blur(15px); */
+	/* background-color: rgba(0, 0, 0, .7); */
+	-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+	/* backdrop-filter: url(commonfilters.svg#filter); */
+}
+
+.blur2.active23{
+    opacity: 1;
+	pointer-events: all;
+	transform: scale(1);
+}
+.blur2{
+    position: fixed;
+	transform: scale(0);
+	opacity: 0;
+	z-index: 1;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	pointer-events: none;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	/* -webkit-filter: blur(15px);
+	-moz-filter:blur(15px);
+	filter: blur(15px); */
+	/* background-color: rgba(0, 0, 0, .7); */
+	-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+	/* backdrop-filter: url(commonfilters.svg#filter); */
+}
+
+
+
+.popup{
+    z-index: 2;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .5);
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup .crosbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.blur{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+}
+
+.blur1{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+}
+.blur2{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+}
+
+
+.popup1{
+    position: absolute;
+    z-index: 2;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .5);
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup1.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup1 .crosbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup2{
+    z-index: 2;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .5);
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup2.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup2 .crosbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+.popup .form h2{
+    text-align: center;
+    margin: 1em;
+}
+.popup .form .form-element{
+    margin: 15px 0;
+}
+.popup .form .form-element input[type="text"] ,
+.popup .form .form-element input[type="email"],
+.popup .form .form-element input[type="phonenumber"]
+{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+}
+.popup .form .form-element button::before{
+    content: '';
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+.popup .form .form-element button{
+    width: 100%;
+    /* background: #3a7bd5; */
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 7px 0;
+    position: relative;
+}

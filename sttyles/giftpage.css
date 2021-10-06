@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (min-width: 0px){
+      
+    .giftbox{
+        width: 100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 300px;   
+        height:auto;
+    }
+    .giftbox .side>img{
+        width: 100%;
+        height: auto;
+    }
+    .giftbox .clickhere{
+        text-align: center;
+        margin-top:20px;
+    }
+    .giftbox .clickhere>a{
+        font-size: .5em;
+        padding:10px 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: purple;
+        border-radius:15px;
+        border: 2px solid white;
+        transition: all 1s ease-in-out;
+    }
+    .giftbox .clickhere>a:hover{
+        color: purple;
+        background-color: #fff;
+        border: 2px solid purple;
+    }
+    
+}
+
+@media (min-width: 576px) {
+
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 500px;   
+        height:auto;
+    }
+    .giftbox .clickhere>a{ 
+        font-weight: bold;
+        font-size:1.2em;
+        padding:10px 50px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 650px;   
+        height:auto;
+    }
+    .giftbox .clickhere>a{ 
+        font-weight: bold;
+        font-size:1.3em;
+        padding:10px 50px;
+    }
+}
+@media (min-width: 992px) {
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 750px;   
+        height:auto;
+    }
+    .giftbox .clickhere>a{ 
+        font-weight: bold;
+        font-size:1.3em;
+        padding:10px 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 750px;   
+    }
+    .giftbox .clickhere>a{ 
+        font-weight: bold;
+        font-size:1.4em;
+        padding:10px 60px;
+    }
+}
+@media (min-width: 1400px) {
+    .giftbox .side{
+        /* border: 2px solid red;      */
+        max-width: 800px;   
+       
+    }
+    .giftbox .clickhere>a{ 
+        font-weight: bold;
+        font-size:1.5em;
+        padding:10px 70px;
+    }
+}

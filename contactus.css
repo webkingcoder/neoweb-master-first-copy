@@ -1,0 +1,1394 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {width: 0}
+.navbar .logo {
+  width: 100px;
+  height: auto;
+}
+.navbar{
+  width: 100%;
+  height:auto;
+  /* border: 1px solid #ff0000; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+ .navbar .logo{
+  width: 100px;
+  height: auto;
+}
+ .navbar .logo>img{
+  width: 100%;
+  height: auto;
+  /* border: 2px solid red; */
+}
+
+.navbar .lists{
+  display: none;
+}
+
+.navbar .lists>ul{
+  list-style: none;
+  display: flex;
+}
+
+.navbar .lists>ul>li>a{
+  color: #ff0000;
+}
+.butn:link,
+.butn:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5e16bd;
+  background-image: linear-gradient(90deg, #501aa8, #870de8);
+  padding: 1rem 1.5rem;
+  height: 2.5em;
+  max-width: 200px;
+  margin-right: 13px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.butn::before {
+  background: #fff;
+  content: "";
+  height: 155px;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.butn::after {
+  background: #fff;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 8rem;
+}
+.butn__new::before {
+  left: -50%;
+}
+
+.butn__new::after {
+  left: -100%;
+}
+
+.butn:hover,
+.butn:active {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.butn__new:hover::before {
+  left: 120%;
+  opacity: 0.5s;
+}
+
+.butn__new:hover::after {
+  left: 200%;
+  opacity: 0.6;
+}
+.butn span {
+  z-index: 20;
+}
+.btn, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn10{
+  padding: 10px 10px;
+  margin:5px 1px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  
+}
+
+
+/*=======Button 6============= */
+.btn6{
+  border:2px solid transparent; 
+   -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+.btn6::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  z-index:1;
+  width: 0px;
+  height:1px;
+  background: #3f1b6c;
+  opacity: .45;
+  box-shadow: inset 0px 0px 0px #fff;
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn6:hover::before {
+  width:100%;
+}
+
+.btn6::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top:0px;
+  z-index:1;
+  width: 0px;
+  opacity: .4;
+  height:1px;
+  background: #3f1b6c;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+.btn6:hover::after {
+  width:100%;
+}
+.btn6:hover{
+  border-left:2px solid #870de8;
+  border-right:2px solid #870de8;
+}
+
+
+
+
+#contactus {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/contactus_compress.jpeg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+.contactusgrid {
+  display: grid;
+  grid-template-columns: 400px 500px;
+  width: 900px;
+}
+.form {
+  /* border: 2px solid red; */
+  height: auto;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+.input {
+  width: 100%;
+  height: 2.5em;
+  outline: none;
+  overflow: scroll;
+  border-radius: 5px;
+  border: none;
+  padding: .5rem;
+  margin-top: 0.2em;
+}
+.inputmessage {
+  width: 100%;
+  height: 12em;
+  border: none;
+  padding: .5rem;
+  /* overflow: scroll; */
+  border-radius: 5px;
+  outline: none;
+  margin-top: 0.2em;
+}
+
+label {
+  color: white;
+  font-size: 1.5em;
+}
+#contactus .contactusgrid .form .formheading {
+  /* text-align: center; */
+  width: 200px;
+  height: auto;
+  font-size: 2.5em;
+  color: white;
+  border-bottom: 2px solid white;
+  margin: 0 0 1em 0.5em;
+}
+#contactus .contactusgrid .form .contactdiv,
+.emaildiv,
+.messagediv {
+  margin: 0 1em 1em 1em;
+  width: 90%;
+}
+#contactus .contactusgrid .form .submitdiv button:hover{
+  color: white;
+  background-color: #3f1b6c;
+  
+}
+#contactus .contactusgrid .form .submitdiv button {
+  transition: all .5s ease-in-out;
+  margin-left: 1rem;
+  padding: 1em;
+  background-color: white;
+  font-weight: 900;
+  border-radius: 10px;
+  border: none;
+  color: blueviolet;
+}
+
+/* #contactus .contactusgrid .form .emaildiv{
+    margin: 0 0 1em 0;
+}
+#contactus .contactusgrid .form .emaildiv{
+    margin: 0 0 1em 0; */
+/* } */
+
+.contactinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid rgba(255, 255, 255, 0.568);
+}
+.contactinfo > div {
+  color: white;
+}
+.contactinfo i {
+  font-size: 1.8em;
+}
+.contactinfo span {
+  font-size: 1.5em;
+  margin: 0 0 0 0.5em;
+}
+.contactinfo .Email {
+  margin: 0 0 1em;
+}
+.contactinfo .social-media {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactinfo .social-media a {
+  margin: 2em 1em;
+  color: white;
+  font-size: 1.5em;
+}
+.contactinfo .legalform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.contactinfo .legalform > span {
+  margin: 0 1.5em 0 1.5em;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  
+  #contactus {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/Contactuspage-app.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .contactusgrid {
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 80%;
+    width:90%;
+  }
+  .form {
+    /* border: 2px solid red; */
+    height: auto;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+
+  .input {
+    width: 90%;
+    height: 20px;
+    outline: none;
+    overflow: scroll;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+  }
+  .inputmessage {
+    width: 90%;
+    height: 6em;
+    border: none;
+    /* overflow: scroll; */
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.1em;
+  }
+  label {
+    color: white;
+    font-size: 20px;
+  }
+  
+#contactus .contactusgrid .form .formheading {
+  /* text-align: center; */
+  width: 90%;
+  height: auto;
+  font-size: 25px;
+  color: white;
+  border-bottom: 2px solid white;
+  margin: 20px 0 20px 0px;
+}
+#contactus .contactusgrid .form .contactdiv,
+.emaildiv,
+.messagediv {
+  margin: 0 1em 1em 1em;
+  width: 90%;
+}
+#contactus .contactusgrid .form .submitdiv {
+  width: 80%;
+  overflow: hidden;
+  height: 30px;
+  /* border:  2px solid red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0em 10px -1em;
+}
+#contactus .contactusgrid .form .submitdiv button {
+  padding: 1em;
+  background-color: white;
+  font-weight: 900;
+  border-radius: 50px;
+  border: none;
+  color: blueviolet;
+}
+.contactinfo {
+  margin: 2em 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid rgba(255, 255, 255, 0.568);
+}
+.contactinfo > div {
+  color: white;
+}
+.contactinfo i {
+  font-size: 15px;
+}
+.contactinfo span {
+  font-size: 15px;
+  margin: 0;
+}
+.contactinfo .Email {
+  margin: .5em 0 .5em;
+}
+.contactinfo .social-media {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactinfo .social-media i {
+  margin: 15px 10px;
+  font-size: 25px;
+}
+.contactinfo .legalform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.contactinfo .legalform > span {
+  margin: 0 5px ;
+  font-size: 15px;
+}
+}
+
+
+@media only screen and (min-width: 768px){
+  .navbar .logo .logoimg {
+    width: 100%;
+    height: 100%;
+  }
+  .navbar .listandsign .lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    color: white;
+  
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding-top: 2em;
+    height: 4rem;
+    width:100%;
+  }
+  .navbar .listandsign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .listandsign .lists ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar .listandsign .lists ul li {
+    list-style: none;
+    margin: 0em;
+    /* border-bottom: 2px solid ed; */
+  }
+  .navbar .listandsign .lists ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: blue;
+  }
+  .navbar .listandsign .sign {
+    color: white;
+  }
+  .navbar .listandsign .sign .signbtn {
+    font-size: 1.5em;
+  }
+  
+
+  .butn:link,
+  .butn:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5e16bd;
+  background-image: linear-gradient(90deg, #501aa8, #870de8);
+  padding: 1rem 1rem;
+  height: 2rem;
+  width: 130px;
+  
+  margin-right: 13px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  .butn::before {
+  background: #fff;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .butn::after {
+  background: red;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 8rem;
+  }
+  .butn__new::before {
+  left: -50%;
+  }
+  
+  .butn__new::after {
+  left: -100%;
+  }
+  
+  .butn:hover,
+  .butn:active {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .butn__new:hover::before {
+  left: 120%;
+  opacity: 0.5s;
+  }
+  
+  .butn__new:hover::after {
+  left: 200%;
+  opacity: 0.6;
+  }
+  .butn span {
+  z-index: 20;
+  }
+  .btn, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn10{
+    padding: 10px 10px;
+    margin:5px 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    
+  }
+  
+  
+  /*=======Button 6============= */
+  .btn6{
+    border:2px solid transparent; 
+     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  }
+  
+  .btn6::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    z-index:1;
+    width: 0px;
+    height:1px;
+    background: #3f1b6c;
+    opacity: .45;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  
+  .btn6:hover::before {
+    width:100%;
+  }
+  
+  .btn6::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index:1;
+    width: 0px;
+    opacity: .4;
+    height:1px;
+    background: #3f1b6c;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  .btn6:hover::after {
+    width:100%;
+  }
+  .btn6:hover{
+    border-left:2px solid #870de8;
+    border-right:2px solid #870de8;
+  }  
+  #contactus {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/contactus_compress.jpeg);
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+    align-items: center;
+    background-position: center;
+    background-size: 108% 100%;
+    background-repeat: no-repeat;
+  }
+  .contactusgrid {
+    display: grid;
+    padding-left: 80px;
+    grid-template-columns: 300px 300px;
+    width: 750px;
+    /* border: 2px solid red; */
+
+  }
+  .form {
+    /* border: 2px solid red; */
+    height: auto;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+  .input {
+    width: 100%;
+    height: 1em;
+    outline: none;
+    overflow: scroll;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    margin-top: 0.2em;
+  }
+  .inputmessage {
+    width: 100%;
+    height: 12em;
+    border: none;
+    padding: .5rem;
+    /* overflow: scroll; */
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.2em;
+  }
+  label {
+    color: white;
+    font-size: 1em;
+  }
+  #contactus .contactusgrid .form .formheading {
+    /* text-align: center; */
+    width: 200px;
+    height: auto;
+    font-size: 1.5em;
+    color: white;
+    border-bottom: 2px solid white;
+    margin: 0 0 1em 1em;
+  }
+  #contactus .contactusgrid .form .contactdiv,
+  .emaildiv,
+  .messagediv {
+    margin: 0 1em 1em 1em;
+    width: 100%;
+  }
+  #contactus .contactusgrid .form .submitdiv button:hover{
+    color: white;
+    background-color: #3f1b6c;
+    
+  }
+  #contactus .contactusgrid .form .submitdiv button {
+    transition: all .5s ease-in-out;
+    margin-left: 1rem;
+    padding: 1em;
+    background-color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    color: blueviolet;
+  }
+  
+  /* #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0;
+  }
+  #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0; */
+  /* } */
+  
+  .contactinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50px;
+    flex-direction: column;
+    border-left: 2px solid rgba(255, 255, 255, 0.568);
+  }
+  .contactinfo > div {
+    color: white;
+  }
+  .contactinfo i {
+    font-size: 1em;
+  }
+  .contactinfo span {
+    font-size: 1em;
+    margin: 0 0 0 0.5em;
+  }
+  .contactinfo .Email {
+    margin: 0 0 1em;
+  }
+  .contactinfo .social-media {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactinfo .social-media a {
+    margin: 2em 1em;
+    color: white;
+    font-size: 1em;
+  }
+  .contactinfo .legalform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .contactinfo .legalform > span {
+    margin: 0 .1em 0 .1em;
+  }
+  
+  
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) and (max-width:1400){
+  .navbar .logo .logoimg {
+    width: 100%;
+    height: 100%;
+  }
+  .navbar .listandsign .lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    color: white;
+  
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding-top: 2em;
+    height: 4rem;
+    width:100%;
+  }
+  .navbar .listandsign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .listandsign .lists ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar .listandsign .lists ul li {
+    list-style: none;
+    margin: 0em;
+    /* border-bottom: 2px solid ed; */
+  }
+  .navbar .listandsign .lists ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: blue;
+  }
+  .navbar .listandsign .sign {
+    color: white;
+  }
+  .navbar .listandsign .sign .signbtn {
+    font-size: 1.5em;
+  }
+  
+
+  .butn:link,
+  .butn:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5e16bd;
+  background-image: linear-gradient(90deg, #501aa8, #870de8);
+  padding: 1rem 1rem;
+  height: 2rem;
+  width: 130px;
+  
+  margin-right: 13px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  .butn::before {
+  background: #fff;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .butn::after {
+  background: white;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 8rem;
+  }
+  .butn__new::before {
+  left: -50%;
+  }
+  
+  .butn__new::after {
+  left: -100%;
+  }
+  
+  .butn:hover,
+  .butn:active {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .butn__new:hover::before {
+  left: 120%;
+  opacity: 0.5s;
+  }
+  
+  .butn__new:hover::after {
+  left: 200%;
+  opacity: 0.6;
+  }
+  .butn span {
+  z-index: 20;
+  }
+  .btn, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn10{
+    padding: 10px 10px;
+    margin:5px 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    
+  }
+  
+  
+  /*=======Button 6============= */
+  .btn6{
+    border:2px solid transparent; 
+     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  }
+  
+  .btn6::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    z-index:1;
+    width: 0px;
+    height:1px;
+    background: #3f1b6c;
+    opacity: .45;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  
+  .btn6:hover::before {
+    width:100%;
+  }
+  
+  .btn6::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index:1;
+    width: 0px;
+    opacity: .4;
+    height:1px;
+    background: #3f1b6c;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  .btn6:hover::after {
+    width:100%;
+  }
+  .btn6:hover{
+    border-left:2px solid #870de8;
+    border-right:2px solid #870de8;
+  }  
+  #contactus {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/contactus_compress.jpeg);
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    align-items: center;
+    background-position: center;
+    background-size: 110% 100%;
+    background-repeat: no-repeat;
+  }
+  .contactusgrid {
+    display: grid;
+    padding-left: 70px;
+    grid-template-columns: 300px 300px;
+    width: 750px;
+    /* border: 2px solid red; */
+
+  }
+  .form {
+    /* border: 2px solid red; */
+    height: auto;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+  .input {
+    width: 100%;
+    height: 1em;
+    outline: none;
+    overflow: scroll;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    margin-top: 0.2em;
+  }
+  .inputmessage {
+    width: 100%;
+    height: 12em;
+    border: none;
+    padding: .5rem;
+    /* overflow: scroll; */
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.2em;
+  }
+  label {
+    color: white;
+    font-size: 1em;
+  }
+  #contactus .contactusgrid .form .formheading {
+    /* text-align: center; */
+    width: 200px;
+    height: auto;
+    font-size: 1.5em;
+    color: white;
+    border-bottom: 2px solid white;
+    margin: 0 0 1em 1em;
+  }
+  #contactus .contactusgrid .form .contactdiv,
+  .emaildiv,
+  .messagediv {
+    margin: 0 1em 1em 1em;
+    width: 100%;
+  }
+  #contactus .contactusgrid .form .submitdiv button:hover{
+    color: white;
+    background-color: #3f1b6c;
+    
+  }
+  #contactus .contactusgrid .form .submitdiv button {
+    transition: all .5s ease-in-out;
+    margin-left: 1rem;
+    padding: 1em;
+    background-color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    color: blueviolet;
+  }
+  
+  /* #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0;
+  }
+  #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0; */
+  /* } */
+  
+  .contactinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 100px;
+    flex-direction: column;
+    border-left: 2px solid rgba(255, 255, 255, 0.568);
+    /* border: 2px solid red; */
+  }
+  .contactinfo > div {
+    color: white;
+  }
+  .contactinfo i {
+    font-size: 1em;
+  }
+  .contactinfo span {
+    font-size: 1em;
+    margin: 0 0 .5em;
+  }
+  .contactinfo .Email {
+    margin: 0 0 1em;
+  }
+  .contactinfo .social-media {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactinfo .social-media a {
+    margin: 2em 1em;
+    color: white;
+    font-size: 1.5em;
+  }
+  .contactinfo .legalform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .contactinfo .legalform > span {
+    margin: 0 .1em 0 .1em;
+  }
+  
+}
+
+@media (min-width: 1400px) {
+  .navbar{
+    width: 100%;
+    height:auto;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+   .navbar .logo{
+    width: 100px;
+    height: auto;
+  }
+   .navbar .logo>img{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+  }
+  
+  .navbar .lists{
+    display: none;
+  }
+  
+  .navbar .lists>ul{
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .lists>ul>li>a{
+    color: #ff0000;
+  }
+  .butn:link,
+  .butn:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #5e16bd;
+    background-image: linear-gradient(90deg, #501aa8, #870de8);
+    padding: 1rem 1.5rem;
+    height: 2.5em;
+    max-width: 200px;
+    margin-right: 13px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .butn::before {
+    background: #fff;
+    content: "";
+    height: 155px;
+    opacity: 0;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .butn::after {
+    background: #fff;
+    content: "";
+    height: 20rem;
+    opacity: 0;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 8rem;
+  }
+  .butn__new::before {
+    left: -50%;
+  }
+  
+  .butn__new::after {
+    left: -100%;
+  }
+  
+  .butn:hover,
+  .butn:active {
+    transform: translateY(-3px);
+    color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .butn__new:hover::before {
+    left: 120%;
+    opacity: 0.5s;
+  }
+  
+  .butn__new:hover::after {
+    left: 200%;
+    opacity: 0.6;
+  }
+  .butn span {
+    z-index: 20;
+  }
+  .btn, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn10{
+    padding: 10px 10px;
+    margin:5px 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display:inline-block;
+    
+  }
+  
+  
+  /*=======Button 6============= */
+  .btn6{
+    border:2px solid transparent; 
+     -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  }
+  
+  .btn6::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    z-index:1;
+    width: 0px;
+    height:1px;
+    background: #3f1b6c;
+    opacity: .45;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  
+  .btn6:hover::before {
+    width:100%;
+  }
+  
+  .btn6::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top:0px;
+    z-index:1;
+    width: 0px;
+    opacity: .4;
+    height:1px;
+    background: #3f1b6c;
+    -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+    transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+  }
+  .btn6:hover::after {
+    width:100%;
+  }
+  .btn6:hover{
+    border-left:2px solid #870de8;
+    border-right:2px solid #870de8;
+  }
+  
+  
+  
+  
+  #contactus {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/contactus_compress.jpeg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+  }
+  .contactusgrid {
+    display: grid;
+    grid-template-columns: 400px 500px;
+    width: 900px;
+  }
+  .form {
+    /* border: 2px solid red; */
+    height: auto;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 2px solid red; */
+  }
+  .input {
+    width: 100%;
+    height: 2.5em;
+    outline: none;
+    overflow: scroll;
+    border-radius: 5px;
+    border: none;
+    padding: .5rem;
+    margin-top: 0.2em;
+  }
+  .inputmessage {
+    width: 100%;
+    height: 12em;
+    border: none;
+    padding: .5rem;
+    /* overflow: scroll; */
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.2em;
+  }
+  label {
+    color: white;
+    font-size: 1.5em;
+  }
+  #contactus .contactusgrid .form .formheading {
+    /* text-align: center; */
+    width: 200px;
+    height: auto;
+    font-size: 2.5em;
+    color: white;
+    border-bottom: 2px solid white;
+    margin: 0 0 1em 0.5em;
+  }
+  #contactus .contactusgrid .form .contactdiv,
+  .emaildiv,
+  .messagediv {
+    margin: 0 1em 1em 1em;
+    width: 90%;
+  }
+  #contactus .contactusgrid .form .submitdiv button:hover{
+    color: white;
+    background-color: #3f1b6c;
+    
+  }
+  #contactus .contactusgrid .form .submitdiv button {
+    transition: all .5s ease-in-out;
+    margin-left: 1rem;
+    padding: 1em;
+    background-color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    border: none;
+    color: blueviolet;
+  }
+  
+  /* #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0;
+  }
+  #contactus .contactusgrid .form .emaildiv{
+      margin: 0 0 1em 0; */
+  /* } */
+  
+  .contactinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 2px solid rgba(255, 255, 255, 0.568);
+  }
+  .contactinfo > div {
+    color: white;
+  }
+  .contactinfo i {
+    font-size: 1.8em;
+  }
+  .contactinfo span {
+    font-size: 1.5em;
+    margin: 0 0 0 0.5em;
+  }
+  .contactinfo .Email {
+    margin: 0 0 1em;
+  }
+  .contactinfo .social-media {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactinfo .social-media a {
+    margin: 2em 1em;
+    color: white;
+    font-size: 1.5em;
+  }
+  .contactinfo .legalform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* border: 2px solid red; */
+  }
+  .contactinfo .legalform > span {
+    margin: 0 01em 0 0em;
+  }
+}

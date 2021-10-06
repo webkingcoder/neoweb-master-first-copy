@@ -1,0 +1,654 @@
+*{
+    box-sizing: border-box;
+    padding:0%;
+    margin: 0%;
+}
+@media screen and (min-width:0px) {
+    .section1{
+            max-width:576px;
+            height:100vh;
+            background-image: url(./images/Home-app.png);
+      background-size: 130% 145%;
+      background-repeat: no-repeat;
+      background-position: center  top -120px;
+        }
+    .section1 #Home{
+        width: 100%;
+    }
+    .section1 #Home .navbar{
+        width: 100%;
+        padding: 2px 10px;
+    }
+    .section1 #Home .navbar .logo{
+        max-width: 120px;
+    }
+    .section1 #Home .navbar .logo .logoimg{
+        width: 100%;
+        height: auto;
+    }
+    .section1 #Home .navbar .listandsign .lists{
+        display: none;
+    }
+    
+  .butn:link,
+  .butn:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #5e16bd;
+    background-image: linear-gradient(90deg, #501aa8, #870de8);
+    padding: 1rem 1.5rem;
+    height: 2.5em;
+    max-width: 200px;
+    margin-right: 13px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .butn::before {
+    background: #fff;
+    content: "";
+    height: 155px;
+    opacity: 0;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .butn::after {
+    background: #fff;
+    content: "";
+    height: 20rem;
+    opacity: 0;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 8rem;
+  }
+  .butn__new::before {
+    left: -50%;
+  }
+
+  .butn__new::after {
+    left: -100%;
+  }
+
+  .butn:hover,
+  .butn:active {
+    transform: translateY(-3px);
+    color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .butn__new:hover::before {
+    left: 120%;
+    opacity: 0.5s;
+  }
+
+  .butn__new:hover::after {
+    left: 200%;
+    opacity: 0.6;
+  }
+  .butn span {
+    z-index: 20;
+  }
+  .section1 #bodysec .projects{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding:10px;
+    }
+    .section1 #bodysec .projects .line1 ,.line2 ,.line3{
+        color: white;
+        text-transform: capitalize;
+    }
+    .section1 #bodysec .projects .line1{
+        font-size: 2em;
+    }
+    .section1 #bodysec .projects .line2, .line3{
+        font-size: 1.2em;
+    }
+    .section1 #bodysec .projects .quotecontainer{
+        width: 100%;
+    }
+    .section1 #bodysec .projects .quotecontainer .quote-box{
+        min-width: 200px;
+        max-width: 300px;
+        padding: 0 25px 0 0;
+    }
+    .section1 #bodysec .projects .quotecontainer .quote-box>p{
+        font-size:1em;
+        color: white;
+        margin: 10px 0;
+        text-shadow: 5px 5px 8px black;
+    }
+    .section1 #bodysec .projects .quotecontainer .quote-box>small{
+        color: white;
+        text-shadow: 5px 5px 8px black;
+    }    
+    .section1 #bodysec .projects .sapc{
+        width: 200px;
+        text-align: center;
+        position: relative;
+        top: 100px;
+        margin: auto;
+    }
+    .section1 #bodysec .projects .sapc ul{
+        padding:0;
+        margin-bottom: 0;
+    }
+
+    .section1 #bodysec .projects .sapc li{
+        list-style: none;
+        background-color: #4c1796;
+        margin: 5px 10px;
+        border-radius: 15px;
+    }
+    .section1 #bodysec .projects .sapc li a{
+        font-size: 1em;
+        text-decoration: none;
+        color: white;
+    }
+    .section1 #bodysec .projects .button{
+        position: relative;
+        top: 80px;
+        /* border: 2px solid chartreuse; */
+        width: 40%;
+        margin: auto;
+        text-align: center;
+    }
+    .section1 #bodysec .projects .button i{
+        opacity: 1;
+        font-size:4em;
+        color: purple;
+        transition: all 1s ease-in-out;
+    } 
+    .section1 #bodysec .projects .button:hover i{ 
+        opacity: 0;
+    }
+    .section1 #bodysec .projects .button a{ 
+        position: relative;
+        top: -30px;
+        font-size:1em;
+        border-radius: 15px;
+        opacity: 0;
+        color: white;
+        border: 2px solid purple;
+        padding:5px 15px;
+        background: purple;
+        text-decoration: none;
+    }
+    .section1 #bodysec .projects .button:hover a{
+        transition: all 1s ease-in-out;
+        opacity: 1;
+    } 
+
+}
+@media (min-width: 576px){
+    .section1{
+        max-width:768px;
+        height:100vh;
+        background-image: url(./images/Home-app.png);
+  background-size: 130% 145%;
+  background-repeat: no-repeat;
+  background-position: center  top -120px;
+    }
+    .section1 #Home .navbar{
+        width: 100%;
+        padding: 5px 10px;
+    }
+    
+    .section1 #bodysec .projects .line1{
+        font-size: 2.5em;
+    }
+    .section1 #bodysec .projects .line2, .line3{
+        font-size: 1.8em;
+    }
+    .section1 #bodysec .projects .quotecontainer .quote-box{
+        max-width: 400px;
+        padding: 0 25px 0 0;
+    }
+
+    .section1 #bodysec .projects .sapc{
+        top: 60px;
+    }
+    
+    .section1 #bodysec .projects .sapc li{
+        margin: 10px 10px;
+        border-radius: 15px;
+        padding:5px 0;
+    }
+    .section1 #bodysec .projects .button{
+        top: 30px;
+    }
+
+}
+    @media screen and (min-width: 768px) {
+        
+        .section1{
+            max-width:996px;
+            background-image: url(./images/Home-01.png);
+        }
+    
+        .section1 #Home .navbar .listandsign .lists{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top:20px;
+        }
+        .section1 #Home .navbar{
+            margin-top: 0;
+            padding-top:0%;
+            width: 100%; 
+    }
+    .section1 #Home .navbar .listandsign{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    
+    .section1 #Home .navbar .listandsign .lists ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section1 #Home .navbar .listandsign .lists ul li{
+        list-style: none;
+    }
+    .section1 #Home .navbar .listandsign .lists ul li a{
+        text-decoration: none;
+    }
+
+    .btn,
+    .btn2,
+    .btn3,
+    .btn4,
+    .btn5,
+    .btn6,
+    .btn7,
+    .btn10 {
+      padding: 10px 10px;
+      margin: 5px 1px;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+    }
+  
+    /*=======Button 6============= */
+    .btn6 {
+      border: 2px solid transparent;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+  
+    .btn6::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      width: 0%;
+      height: 1px;
+      background: #6098ff;
+      box-shadow: inset 0px 0px 0px #fff;
+      display: block;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+  
+    .btn6:hover::before {
+      width: 100%;
+    }
+  
+    .btn6::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+      width: 0%;
+      height: 1px;
+      background: #6098ff;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+    .btn6:hover::after {
+      width: 100%;
+    }
+    .btn6:hover {
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+
+    .section1 #bodysec .projects .sapc{
+        width: 200px;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        margin: auto;
+    }
+    .section1 #bodysec .projects .button{
+        position: relative;
+        top: -100px;
+        /* border: 2px solid chartreuse; */
+        width: 40%;
+        margin: auto;
+        text-align: center;
+    }
+    .section1 #bodysec .projects .sapc{
+        transform: translateY(-5000px);
+    }
+    }
+
+    @media screen and (min-width: 996px) {
+        .section1{
+            max-width:1200px;
+            background-image: url(./images/Home-01.png);
+        }
+        .section1 #bodysec .projects .line1{
+            font-size: 4em;
+        }
+        .section1 #bodysec .projects .line2, .line3{
+            font-size: 3em;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box{
+            max-width: 700px;
+            padding: 0 25px 0 0;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box>p{
+            font-size:2em;
+            color: white;
+            margin: 10px 0;
+            text-shadow: 5px 5px 8px black;
+        }
+        .section1 #bodysec .projects .button{
+            position: relative;
+            top: -200px;
+            /* border: 2px solid chartreuse; */
+            width: 20%;
+            margin: auto;
+            text-align: center;
+        }
+        .section1 #bodysec .projects .button a{ 
+            position: relative;
+            top: -30px;
+            font-size:2em;
+        }
+        .section1 #bodysec .projects .button i{
+            opacity: 1;
+            font-size:5em;
+        }
+    
+    }
+
+    @media screen and (min-width:1200px) {
+        .section1{
+            max-width:1440px;
+            background-image: url(./images/Home-01.png);
+        }
+        .section1 #bodysec .projects .line1{
+            font-size: 4em;
+        }
+        .section1 #bodysec .projects .line2, .line3{
+            font-size: 3em;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box{
+            max-width: 700px;
+            padding: 0 25px 0 0;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box>p{
+            font-size:2em;
+            color: white;
+            margin: 10px 0;
+            text-shadow: 5px 5px 8px black;
+        }
+        .section1 #bodysec .projects .button{
+            position: relative;
+            top: -200px;
+            /* border: 2px solid chartreuse; */
+            width: 20%;
+            margin: auto;
+            text-align: center;
+        }
+        .section1 #bodysec .projects .button a{ 
+            position: relative;
+            top: -30px;
+            font-size:2em;
+        }
+        .section1 #bodysec .projects .button i{
+            opacity: 1;
+            font-size:5em;
+        }
+    }
+
+    @media screen and (min-width: 1400px) {
+
+        .section1{
+            max-width:100%;
+            background-image: url(./images/Home-01.png);
+            background-size: 130% 120%;
+            background-repeat: no-repeat;
+            background-position: center  top -400px;
+        }
+        .section1 #bodysec .projects{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding:10px;
+          }
+        
+        .section1 #bodysec .projects .line1{
+            font-size: 15em;
+        }
+        .section1 #bodysec .projects .line2, .line3{
+            font-size: 10em;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box{
+            max-width: 300em;
+            text-align: center;
+            margin: 0 auto;
+            /* border: 2px solid chartreuse; */
+            padding: 0 25px 0 0;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box>p{
+            font-size:9em;
+            color: white;
+            margin: 10px 0;
+            text-shadow: 5px 5px 8px black;
+        }
+        .section1 #bodysec .projects .quotecontainer .quote-box>small{
+            font-size:9em
+        }
+
+        .section1 #bodysec .projects .button{
+            position: relative;
+            top: -200px;
+            /* border: 2px solid chartreuse; */
+            width: 20%;
+            margin: auto;
+            text-align: center;
+        }
+        .section1 #bodysec .projects .button a{ 
+            position: relative;
+            top: -30px;
+            font-size:20em;
+        }
+        .section1 #bodysec .projects .button i{
+            opacity: 1;
+            font-size:50em;
+        }
+        
+        .section1 #Home .navbar .listandsign .lists{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top:20px;
+        }
+        .section1 #Home .navbar .logo{
+            max-width: 50em;
+        }
+        .section1 #Home .navbar{
+            margin-top: 0;
+            padding-top:5em;
+            width: 100%; 
+    }
+    .section1 #Home .navbar .listandsign{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    
+    .section1 #Home .navbar .listandsign .lists ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .section1 #Home .navbar .listandsign .lists ul li{
+        list-style: none;
+    }
+    .section1 #Home .navbar .listandsign .lists ul li a{
+        text-decoration: none;
+        color: white;
+        font-size: 10em;
+    }
+    .btn,
+    .btn2,
+    .btn3,
+    .btn4,
+    .btn5,
+    .btn6,
+    .btn7,
+    .btn10 {
+      padding: 10px 10px;
+      margin: 5px 15px;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+      display: inline-block;
+    }
+  
+    /*=======Button 6============= */
+    .btn6 {
+      border: 2px solid transparent;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+  
+    .btn6::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: -1;
+      width: 0%;
+      height: 1px;
+      background: #6098ff;
+      box-shadow: inset 0px 0px 0px #fff;
+      display: block;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+  
+    .btn6:hover::before {
+      width: 100%;
+    }
+  
+    .btn6::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: -1;
+      width: 0%;
+      height: 1px;
+      background: #6098ff;
+      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+    }
+    .btn6:hover::after {
+      width: 100%;
+    }
+    .btn6:hover {
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+    .butn:link,
+    .butn:visited {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #5e16bd;
+      background-image: linear-gradient(90deg, #501aa8, #870de8);
+      padding: 1em 1em;
+      height: 2em;
+      max-width: 50em;
+      margin-right: 13px;
+      border-radius: 4px;
+      border: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+    .butn::before {
+      background: #fff;
+      content: "";
+      height: 155px;
+      opacity: 0;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      width: 50px;
+      transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    .butn::after {
+      background: #fff;
+      content: "";
+      height: 20rem;
+      opacity: 0;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 8rem;
+    }
+    .butn__new::before {
+      left: -50%;
+    }
+  
+    .butn__new::after {
+      left: -100%;
+    }
+  
+    .butn:hover,
+    .butn:active {
+      transform: translateY(-3px);
+      color: #fff;
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+  
+    .butn__new:hover::before {
+      left: 120%;
+      opacity: 0.5s;
+    }
+  
+    .butn__new:hover::after {
+      left: 200%;
+      opacity: 0.6;
+    }
+    .butn span {
+      z-index: 20;
+    }
+    }

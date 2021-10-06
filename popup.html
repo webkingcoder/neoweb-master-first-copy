@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="center">
+        <button class="submit">Login</button>
+    </div>
+    <div class="popup">
+        <div class="crosbtn">&times;</div>
+        <div class="form">
+            <h2>Get<span> FLEEK</span></h2>
+            <form id="popform" class="myform">
+                <!-- enctype="multipart/form-data" -->
+                <div class="form-element">
+                    <label for="myName">Name</label>
+                    <input type="text" placeholder="name" required>
+                </div>
+                <div class="form-element">
+                    <label for="myemail">E-Mail</label>
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-element">
+                    <label for="mynum">Phone Number</label>
+                    <input type="phonenumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // const scriptURL = 'https://script.google.com/macros/s/AKfycbwmiH-5f0lr6PcicCFRb_zJpJXAdOD134V49wbdT7bxFjet_zpiNUf63b5RCylpDPgsnw/exec'
+        //     const form = document.forms['google-sheet']
+          
+        //     form.addEventListener('submit', e => {
+        //       e.preventDefault()
+        //       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        //         .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        //         .catch(error => console.error('Error!', error.message))
+        //     })
+        // var sheetName = 'Sheet1'
+		// var scriptProp = PropertiesService.getScriptProperties()
+
+		// function intialSetup () {
+		//   var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+		//   scriptProp.setProperty('key', activeSpreadsheet.getId())
+		// }
+
+		// function doPost (e) {
+		//   var lock = LockService.getScriptLock()
+		//   lock.tryLock(10000)
+
+		//   try {
+		// 	var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+		// 	var sheet = doc.getSheetByName(sheetName)
+
+		// 	var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+		// 	var nextRow = sheet.getLastRow() + 1
+
+		// 	var newRow = headers.map(function(header) {
+		// 	  return header === 'timestamp' ? new Date() : e.parameter[header]
+		// 	})
+
+		// 	sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+		// 	return ContentService
+		// 	  .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
+		// 	  .setMimeType(ContentService.MimeType.JSON)
+		//   }
+
+		//   catch (e) {
+		// 	return ContentService
+		// 	  .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+		// 	  .setMimeType(ContentService.MimeType.JSON)
+		//   }
+
+		//   finally {
+		// 	lock.releaseLock()
+		//   }
+		// }
+        // const myform = document.getElementsByClassName("myform");
+
+        // myform.addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     const formData = new FormData(this);
+
+        //     fetch('login.php', {
+        //         method: 'post',
+        //         body: formData
+        //     }).then(function (response) {
+        //         return response.text();
+        //     }).then(function (text) {
+        //         console.log(text);
+        //     }).catch(function (errr) {
+        //         console.error(error);
+        //     })
+        // })
+   
+        // document.querySelector(".submit").addEventListener("click", function () {
+        //     document.querySelector(".popup").classList.add("active")
+        // });
+
+
+        // document.querySelector(".popup .crosbtn").addEventListener("click", function () {
+        //     document.querySelector(".popup").classList.remove("active")
+        // });
+
+    </script>
+    
+    <script src="./index.js"></script>
+</body>
+
+</html>

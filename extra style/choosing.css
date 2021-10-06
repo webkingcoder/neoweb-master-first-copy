@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+}
+
+#whychoosingus {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/Hireus-01.png);
+  background-size: 100% 90%;
+  background-position: center left 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  /* border: 2px solid red; */
+}
+
+#whychoosingus .choosegrid {
+  display: grid;
+  /* border: 2px solid red; */
+  grid-template-columns: auto auto;
+  width: 93.333vw;
+  height: 100vh;
+}
+
+#whychoosingus .choosegrid .logo {
+  /* border: 2px solid red;   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: auto;
+}
+
+#whychoosingus .choosegrid .logo>img {
+  width: 100%;
+  height: auto;
+}
+
+#whychoosingus .choosegrid .choosingcontent {
+  /* border: 2px solid red;   */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+#whychoosingus .choosegrid .choosingcontent h4 {
+  font-size: 2rem;
+  color: purple
+}
+
+#whychoosingus .choosegrid .choosingcontent .title__accordion,
+.tech-lancers {
+  margin-bottom: 2rem;
+  font-size: 2.0em;
+  font-weight: 900;
+  color: blue;
+}
+
+.tech-lancers {
+  color: white;
+  margin-top: 2em;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+
+#whychoosingus .choosegrid .choosingcontent i {
+  font-size: 2rem;
+  margin: 1rem 1.5em;
+  transform: rotatey(180deg);
+  transition: 1s all;
+}
+
+.choosegrid .choosingcontent .fa-thumbs-up:hover,
+.fa-thumbs-up:focus {
+  color: blue;
+}
+
+.choosegrid .choosingcontent .fa-heart:hover,
+.fa-heart:focus {
+  color: maroon;
+}
+
+.choosegrid .choosingcontent .fa-lightbulb:hover,
+.fa-lightbulb:focus {
+  color: yellow;
+}
+
+
+
+
+@media (min-width:0px) {
+  #whychoosingus {
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(./images/Hireus-app.png);
+    background-size: 110% 110%;
+    background-position: center left 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #whychoosingus .choosegrid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .logo {
+    display: none;
+    width: 50px;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .logo>img {
+    max-width: 10px;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 50%;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent h4 {
+    font-size: 1.2em;
+    margin-bottom: 1px;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent h1 {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1px;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent p {
+    font-size: .8em;
+    text-align: center;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent i {
+    font-size: 1.3em;
+    margin: 1.5em 1.5em;
+    transform: rotatey(180deg);
+  }
+
+  .choosegrid .choosingcontent i:hover {
+    color: rgb(213, 17, 213);
+  }
+
+}
+@media screen and (min-width: 576px) {
+  #whychoosingus {
+    max-width: 100px;
+    height: 100vh;
+    background-image: url(./images/Hireus-app.png);
+    background-size: 130% 100%;
+    background-position: center left 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #whychoosingus .choosegrid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .logo {
+    display: none;
+    width: 50px;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .logo>img {
+    max-width: 10px;
+    height: auto;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 50%;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent h4 {
+    font-size: 1.2em;
+    margin-bottom: 1px;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent h1 {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1px;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent p {
+    font-size: .8em;
+    text-align: center;
+  }
+
+  #whychoosingus .choosegrid .choosingcontent i {
+    font-size: 1.3em;
+    margin: 1.5em 1.5em;
+    transform: rotatey(180deg);
+  }
+
+  .choosegrid .choosingcontent i:hover {
+    color: rgb(213, 17, 213);
+  }  
+}
+@media (min-width:1400px){
+  #whychoosingus {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/Hireus-01.png);
+    background-size: 100% 90%;
+    background-position: center left 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    /* border: 2px solid red; */
+  }
+  #whychoosingus .choosegrid {
+    display: grid;
+    /* border: 2px solid red; */
+    grid-template-columns: auto auto;
+    width:93.333vw;
+    height:100vh;
+  }
+  #whychoosingus .choosegrid .logo {
+    /* border: 2px solid red;   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: auto;
+  }
+  #whychoosingus .choosegrid .logo > img {
+    width: 100%;
+    height: auto;
+  }
+  #whychoosingus
+  .choosegrid .choosingcontent{
+    /* border: 2px solid red;   */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  }
+  #whychoosingus
+  .choosegrid .choosingcontent h4{
+  font-size: 2rem;
+  color:purple
+}
+
+#whychoosingus
+.choosegrid .choosingcontent .title__accordion,.tech-lancers{
+    margin-bottom: 2rem;
+  font-size: 2.0em;
+  font-weight:900;
+  color: blue;
+  }
+  .tech-lancers{
+    color: white;
+    margin-top: 2em;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  
+  
+  #whychoosingus
+  .choosegrid .choosingcontent i{
+  font-size: 2rem;
+  margin: 1rem 1.5em;
+  transform: rotatey(180deg);
+  transition:1s all;
+  }
+  .choosegrid .choosingcontent .fa-thumbs-up:hover,.fa-thumbs-up:focus{
+    color:blue;
+  }
+
+  .choosegrid .choosingcontent .fa-heart:hover,.fa-heart:focus{
+    color:maroon;
+  }
+  .choosegrid .choosingcontent .fa-lightbulb:hover,.fa-lightbulb:focus{
+    color:yellow;
+  }
+
+
+}
