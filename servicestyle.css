@@ -1,162 +1,239 @@
-*{
-    padding:0%;
-    margin: 0%;
-    box-sizing: border-box;
-    overflow: hidden;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-#Service{
-    width:100%;
-    height: 100vh;
-    /* border: 1px solid #ff0000; */
-    background-image: url(./images/service-app.png);
-    background-position: center fixed;
-    background-size: 100% 100%;
+.containersss {
+  overflow: hidden;
 }
-#Service .navbar{
-    width: 100%;
-    height:10vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+#Service {
+  width: 100%;
+  height: 100vh;
+  /* border: 1px solid #ff0000; */
+  background-image: url(./images/service-app.png);
+  background-position: center fixed;
+  background-size: 100% 100%;
 }
-#Service .navbar .logo{
-    width: 100px;
-    height: auto;
+#Service .navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  z-index: 30;
+  justify-content: space-between;
+  padding: 10px;
 }
-#Service .navbar .logo>img{
-    width: 100%;
-    height: auto;
-    /* border: 2px solid red; */
+#Service .navbar .logo {
+  width: 100px;
+  height: auto;
+}
+#Service .navbar .logo > img {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid red; */
+}
+#Service .navbar .lists {
+  display: none;
+}
+.lists2.active {
+  transform: translateX(0vh) scale(1);
+  opacity: 1;
+  display: flex;
+}
+.lists2 {
+  overflow: hidden;
+  display: hidden;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, .55);
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  padding: 2em 2em;
+  background-color: rgba(255, 255, 255, 1);
+  height: fit-content;
+  z-index: 9;
+  transform: translateX(100vh) scale(0);
+  list-style: none;
+}
+.lists2 ul li {
+  list-style: none;
+  margin: 2em 2em;
+}
+.lists2 ul li a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #000;
+}
+.blur{
+	position: fixed;
+	transform: scale(0);
+	opacity: 0;
+	z-index: 8;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	pointer-events: none;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	/* -webkit-filter: blur(15px);
+	-moz-filter:blur(15px);
+	filter: blur(15px); */
+	/* background-color: rgba(0, 0, 0, .7); */
+	-webkit-backdrop-filter: blur(10px);
+	        backdrop-filter: blur(10px);
+	/* backdrop-filter: url(commonfilters.svg#filter); */
+}
+.blur.active2{
+	opacity: 1;
+	pointer-events: all;
+	transform: scale(1);
 }
 
-#Service .navbar .lists{
-    display: none;
+.listandsign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
-#Service .navbar .lists>ul{
-    list-style: none;
-    display: flex;
+.fa-bars {
+  font-size: 2em;
+  /* border: 2px solid rgba(256, 256,256,.5); */
+  padding: 0.2em;
+  color: #000;
+  z-index: 30;
 }
 
-#Service .navbar .lists>ul>li>a{
-    color: #ff0000;
+#Service .navbar .lists > ul {
+  list-style: none;
+  display: flex;
+}
+
+#Service .navbar .lists > ul > li > a {
+  color: #ff0000;
 }
 .butn:link,
-  .butn:visited {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #5e16bd;
-    background-image: linear-gradient(90deg, #501aa8, #870de8);
-    padding: 1rem 1.5rem;
-    height: 2.5em;
-    max-width: 200px;
-    margin-right: 13px;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  .butn::before {
-    background: #fff;
-    content: "";
-    height: 155px;
-    opacity: 0;
-    position: absolute;
-    top: -50px;
-    transform: rotate(35deg);
-    width: 50px;
-    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  .butn::after {
-    background: #fff;
-    content: "";
-    height: 20rem;
-    opacity: 0;
-    position: absolute;
-    top: -50px;
-    transform: rotate(35deg);
-    transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
-    width: 8rem;
-  }
-  .butn__new::before {
-    left: -50%;
-  }
+.butn:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #5e16bd;
+  background-image: linear-gradient(90deg, #501aa8, #870de8);
+  padding: 1rem 1.5rem;
+  height: 2.5em;
+  max-width: 200px;
+  margin-right: 13px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.butn::before {
+  background: #fff;
+  content: "";
+  height: 155px;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.butn::after {
+  background: #fff;
+  content: "";
+  height: 20rem;
+  opacity: 0;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 8rem;
+}
+.butn__new::before {
+  left: -50%;
+}
 
-  .butn__new::after {
-    left: -100%;
-  }
+.butn__new::after {
+  left: -100%;
+}
 
-  .butn:hover,
-  .butn:active {
-    transform: translateY(-3px);
-    color: #fff;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-  }
+.butn:hover,
+.butn:active {
+  transform: translateY(-3px);
+  color: #fff;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
 
-  .butn__new:hover::before {
-    left: 120%;
-    opacity: 0.5s;
-  }
+.butn__new:hover::before {
+  left: 120%;
+  opacity: 0.5s;
+}
 
-  .butn__new:hover::after {
-    left: 200%;
-    opacity: 0.6;
-  }
-  .butn span {
-    z-index: 20;
-  }
+.butn__new:hover::after {
+  left: 200%;
+  opacity: 0.6;
+}
+.butn span {
+  z-index: 20;
+}
 /* logo part */
-  .services{
-    width: 100%;
-    /* border: 2px solid red; */
-    text-align:center;
-    padding-top: .5em;;
+.services h1 {
+  color: #fff;
+  text-transform: capitalize;
+  font-size:1.5em;
 }
-.services .image{
-    margin-right: auto;
-    margin-left: auto;
-    width: 150px;
-    display: none;
+.services {
+  width: 100%;
+  /* border: 2px solid red; */
+  text-align: center;
+  padding-top: 0.5em;
 }
-.services .image>img{
-    width: 100%;
-    height: auto;
+.services .image {
+  margin-right: auto;
+  margin-left: auto;
+  width: 150px;
+  display: none;
+}
+.services .image > img {
+  width: 100%;
+  height: auto;
 }
 
-.service2{
-    /* border: 2px solid red; */
-    top: 12%;
-    width: 100%;
-    height:70vh;
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    /* border: 2px solid red; */
-    align-items: center;
-    position: relative;
+.service2 {
+  /* border: 2px solid red; */
+  top: 12%;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* border: 2px solid red; */
+  align-items: center;
+  position: relative;
 }
-.graphic1{
-  
+.graphic1 {
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-   flex-direction: column;
+  flex-direction: column;
   height: 150px;
   padding-top: 2em;
   padding-left: 0.5em;
-  margin: 0px 0 0 ;
+  margin: 0px 0 0;
   /* border: 2px solid red; */
 }
-.graphic2{
-  
+.graphic2 {
   width: 100%;
   text-align: center;
   display: flex;
@@ -165,431 +242,426 @@
   flex-direction: column;
   height: 150px;
   padding-top: 1em;
-  padding-left: .5em;
-  margin: 0px 0 0 ;
+  padding-left: 0.5em;
+  margin: 0px 0 0;
   /* border: 2px solid red; */
 }
-.graphic3{
-  
+.graphic3 {
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-   flex-direction: column;
+  flex-direction: column;
   height: 150px;
   padding-bottom: 1em;
-  padding-left: .5em;
-  margin: 0px 0 0 ;
+  padding-left: 0.5em;
+  margin: 0px 0 0;
   /* border: 2px solid red; */
 }
-.graphic>h1{
-    font-size:2em;
-    margin: 5px;
+.graphic > h1 {
+  font-size: 2em;
+  margin: 5px;
 }
-.graphic>button{
+.graphic > button {
+  text-align: center;
+  width: 10em;
+  background-color: #870de8;
+  outline: none;
+  /* border: none; */
+  border: 1px solid white;
+  padding: 5px 0px;
+  transition: all 1s ease-in-out;
+}
+.graphic > button:hover a {
+  color: #870de8;
+}
+.graphic > button:hover {
+  border: 1px solid #870de8;
+  background-color: white;
+}
+.graphic > button > a {
+  text-decoration: none;
+  padding: 5px;
+  color: #fff;
+}
+
+@media screen and (min-width: 500px) {
+  #Service {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid #ff0000; */
+    background-image: url(./images/servicepage_compress.jpeg);
+    background-position: center;
+    background-size: 110% 120%;
+    background-repeat: no-repeat;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+  .service2 {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 40vh;
     text-align: center;
-    width:120px;
+    display: flex-grid;
+    justify-content: center;
+    grid-template-columns: 500px 200px 200px;
+    grid-gap: 4em;
+    flex-direction: row;
+    position: relative;
+  }
+  .graphic1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position:absolute; */
+    position: relative;
+    /* left: .2em; */
+  }
+  .graphic2 {
+    /* position:absolute; */
+    position: relative;
+    top: 4em;
+    left: 0.2em;
+    /* border: 2px solid red; */
+  }
+  .graphic3 {
+    /* text-align:center; */
+    position: relative;
+    top: 2em;
+    left: 0.6em;
+    /* border: 2px solid red; */
+  }
+
+  .services .image {
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    display: block;
+  }
+
+  .graphic > button {
+    text-align: center;
+    width: 10em;
     background-color: #870de8;
     outline: none;
     /* border: none; */
     border: 1px solid white;
-    padding: 5px 0px;
     transition: all 1s ease-in-out;
-    
-}
-.graphic>button:hover a{
-    color:#870de8;
-}
-.graphic>button:hover{
-    border: 1px solid #870de8;
-    background-color: white;
-}
-.graphic>button>a{
+    padding: 10px 5px;
+  }
+  .graphic > button > a {
+    text-transform: capitalize;
     text-decoration: none;
-    padding:5px;
     color: #fff;
-}
-
-@media screen and (min-width:500px){
-    #Service{
-        width:100%;
-        height: 100vh;
-        /* border: 1px solid #ff0000; */
-        background-image: url(./images/servicepage_compress.jpeg);
-        background-position:center;
-        background-size: 110% 120%;
-        background-repeat: no-repeat;
-    }
-    .service2{
-        /* border: 2px solid red; */
-        width: 100%;
-        height:40vh;
-        text-align: center;
-        display: flex-grid;
-        justify-content: center;
-        grid-template-columns: 500px 200px 200px;
-        grid-gap: 4em;
-        flex-direction: row;
-        position: relative;
-    }
-    .graphic1{
-      
-  display: flex;
-  justify-content: center;
-  align-items: center;
-        /* position:absolute; */
-        position:relative;
-        /* left: .2em; */
-      }
-      .graphic2{
-        /* position:absolute; */
-        position: relative;
-        top: 4em;
-        left: .2em;
-        /* border: 2px solid red; */
-      }
-      .graphic3{
-        /* text-align:center; */
-        position: relative;
-        top: 2em;
-        left: .6em;
-        /* border: 2px solid red; */
-      }
-      
-      
-      .services .image{
-        margin-right: auto;
-      margin-left: auto;
-      width: 250px;
-      display:block;
-    }
-    
-    .graphic>button{
-      text-align: center;
-      width:10em;
-        background-color: #870de8;
-        outline: none;
-        /* border: none; */
-        border: 1px solid white;
-        transition: all 1s ease-in-out; 
-        padding:10px 5px;
-      }
-      .graphic>button>a{
-        text-transform: capitalize;
-        text-decoration: none;
-        color: #fff;
-      }
-      #Service .navbar .lists{
-        display: flex;
-    }
-    .listandsign{
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-    }
-    .btn,
-    .btn2,
-    .btn3,
-    .btn4,
-    .btn5,
-    .btn6,
-    .btn7,
-    .btn10 {
-      padding: 10px 10px;
-      margin: 5px 1px;
-      color: #fff;
-      text-transform: uppercase;
-      text-align: center;
-      position: relative;
-      text-decoration: none;
-      display: inline-block;
-    }
-  
-    /*=======Button 6============= */
-    .btn6 {
-      border: 2px solid transparent;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-  
-    .btn6::before {
-      content: "";
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      z-index: -1;
-      width: 0%;
-      height: 1px;
-      background: #6098ff;
-      box-shadow: inset 0px 0px 0px #fff;
-      display: block;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-  
-    .btn6:hover::before {
-      width: 100%;
-    }
-  
-    .btn6::after {
-      content: "";
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      z-index: -1;
-      width: 0%;
-      height: 1px;
-      background: #777a7e;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-    .btn6:hover::after {
-      width: 100%;
-    }
-    .btn6:hover {
-      border-left: 2px solid #fff;
-      border-right: 2px solid #fff;
-    }
-
-    .section1 #bodysec .projects .sapc{
-        width: 200px;
-        text-align: center;
-        position: relative;
-        top: 10px;
-        margin: auto;
-    }
-    .section1 #bodysec .projects .button{
-        position: relative;
-        top: -100px;
-        /* border: 2px solid chartreuse; */
-        width: 40%;
-        margin: auto;
-        text-align: center;
-    }
-    
-#Service .navbar .lists>ul>li>a{
+  }
+  #Service .navbar .lists {
+    display: flex;
+  }
+  .listandsign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .btn,
+  .btn2,
+  .btn3,
+  .btn4,
+  .btn5,
+  .btn6,
+  .btn7,
+  .btn10 {
+    padding: 10px 10px;
+    margin: 5px 1px;
     color: #fff;
-}
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /*=======Button 6============= */
+  .btn6 {
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+
+  .btn6::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: #6098ff;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+
+  .btn6:hover::before {
+    width: 100%;
+  }
+
+  .btn6::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: #777a7e;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+  .btn6:hover::after {
+    width: 100%;
+  }
+  .btn6:hover {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+
+  .section1 #bodysec .projects .sapc {
+    width: 200px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    margin: auto;
+  }
+  .section1 #bodysec .projects .button {
+    position: relative;
+    top: -100px;
+    /* border: 2px solid chartreuse; */
+    width: 40%;
+    margin: auto;
+    text-align: center;
+  }
+
+  #Service .navbar .lists > ul > li > a {
+    color: #fff;
+  }
 }
 
-@media screen and (min-width:900px){
-  .graphic1{
-      
+@media screen and (min-width: 900px) {
+  .graphic1 {
     display: flex;
     justify-content: center;
     align-items: center;
-          /* position:absolute; */
-          position:relative;
-          /* left: .2em; */
-        }
-        .graphic2{
-          /* position:absolute; */
-          position: relative;
-          top: 4em;
-          left: .2em;
-          /* border: 2px solid red; */
-        }
-        .graphic3{
-          /* text-align:center; */
-          position: relative;
-          top: 20px;
-          left: 1em;
-          /* border: 2px solid red; */
-        }
-      
-}
-@media screen and (min-width:1100px){
-  .graphic1{
-      
-    display: flex;
-    justify-content: center;
-    align-items: center;
-          /* position:absolute; */
-          position:relative;
-          /* left: .2em; */
-        }
-        .graphic2{
-          /* position:absolute; */
-          position: relative;
-          top: 4em;
-          left: .2em;
-          /* border: 2px solid red; */
-        }
-        .graphic3{
-          /* text-align:center; */
-          position: relative;
-          top: 20px;
-          left: 1.5em;
-          /* border: 2px solid red; */
-        }
-      
-}
-
-@media screen and (min-width:1200px){
-    #Service{
-        width:100%;
-        height: 100vh;
-        /* border: 1px solid #ff0000; */
-        background-image: url(./images/servicepage_compress.jpeg);
-        background-position:center;
-        background-size: 110% 120%;
-        background-repeat: no-repeat;
-    }
-    .services .image{
-        margin-right: auto;
-        margin-left: auto;
-        width: 350px;
-        display:block;
-    }
-    .service2{
-        /* border: 2px solid red; */
-        width: 100%;
-        height:45vh;
-        text-align: center;
-        display: flex-grid;
-        justify-content: center;
-        grid-template-columns: 500px 200px 200px;
-        grid-gap: 4em;
-        flex-direction: row;
-        position: relative;
-    }
-
-    .graphic1{
-        /* position:absolute; */
-        position:relative;
-        top: -5em;
-        right: .5em;
-        /* border: 2px solid red; */
-        
-    }
-    .graphic2{
-        /* position:absolute; */
-        position: relative;
-        top: 1em;
-        left: .5em;
-        /* border: 2px solid red; */
-    }
-    .graphic3{
-        /* text-align:center; */
-        top: -3em;
-        left: 1.7em;
-        /* border: 2px solid red; */
-    }
-
-    .graphic>button{
-        text-align: center;
-        width:12em;
-        background-color: #870de8;
-        outline: none;
-        /* border: none; */
-        border: 1px solid white;
-        transition: all 1s ease-in-out; 
-    }
-    .graphic>button>a{
-        text-decoration: none;
-        padding:5px 5px;
-        color: #fff;
-    }
-    #Service .navbar .lists{
-        display: flex;
-    }
-    .listandsign{
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-    }
-    .btn,
-    .btn2,
-    .btn3,
-    .btn4,
-    .btn5,
-    .btn6,
-    .btn7,
-    .btn10 {
-      padding: 10px 10px;
-      margin: 5px 1px;
-      color: #fff;
-      text-transform: uppercase;
-      text-align: center;
-      position: relative;
-      text-decoration: none;
-      display: inline-block;
-    }
-  
-    /*=======Button 6============= */
-    .btn6 {
-      border: 2px solid transparent;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-  
-    .btn6::before {
-      content: "";
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      z-index: -1;
-      width: 0%;
-      height: 1px;
-      background: #6098ff;
-      box-shadow: inset 0px 0px 0px #fff;
-      display: block;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-  
-    .btn6:hover::before {
-      width: 100%;
-    }
-  
-    .btn6::after {
-      content: "";
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      z-index: -1;
-      width: 0%;
-      height: 1px;
-      background: #777a7e;
-      transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
-    }
-    .btn6:hover::after {
-      width: 100%;
-    }
-    .btn6:hover {
-      border-left: 2px solid #fff;
-      border-right: 2px solid #fff;
-    }
-    .section1 #bodysec .projects .button{
-        position: relative;
-        top: -100px;
-        /* border: 2px solid chartreuse; */
-        width: 40%;
-        margin: auto;
-        text-align: center;
-    }
-    
-#Service .navbar .lists>ul>li>a{
-    color: #fff;
-}
-}
-
-@media screen and (min-width:1400px){
-  .graphic1{
-    /* position:absolute; */
-    position:relative;
-    top: -5em;
-    right: .8em;
-    /* border: 2px solid red; */
-    
-}
-.graphic2{
     /* position:absolute; */
     position: relative;
-    top: .5em;
-    left: .2em;
+    /* left: .2em; */
+  }
+  .graphic2 {
+    /* position:absolute; */
+    position: relative;
+    top: 4em;
+    left: 0.2em;
     /* border: 2px solid red; */
+  }
+  .graphic3 {
+    /* text-align:center; */
+    position: relative;
+    top: 20px;
+    left: 1em;
+    /* border: 2px solid red; */
+  }
 }
-.graphic3{
+@media screen and (min-width: 1100px) {
+  .graphic1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position:absolute; */
+    position: relative;
+    /* left: .2em; */
+  }
+  .graphic2 {
+    /* position:absolute; */
+    position: relative;
+    top: 4em;
+    left: 0.2em;
+    /* border: 2px solid red; */
+  }
+  .graphic3 {
+    /* text-align:center; */
+    position: relative;
+    top: 20px;
+    left: 1.5em;
+    /* border: 2px solid red; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #Service {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid #ff0000; */
+    background-image: url(./images/servicepage_compress.jpeg);
+    background-position: center;
+    background-size: 110% 120%;
+    background-repeat: no-repeat;
+  }
+  .services .image {
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+    display: block;
+  }
+  .service2 {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 45vh;
+    text-align: center;
+    display: flex-grid;
+    justify-content: center;
+    grid-template-columns: 500px 200px 200px;
+    grid-gap: 4em;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .graphic1 {
+    /* position:absolute; */
+    position: relative;
+    top: -5em;
+    right: 0.5em;
+    /* border: 2px solid red; */
+  }
+  .graphic2 {
+    /* position:absolute; */
+    position: relative;
+    top: 1em;
+    left: 0.5em;
+    /* border: 2px solid red; */
+  }
+  .graphic3 {
+    /* text-align:center; */
+    top: -3em;
+    left: 1.7em;
+    /* border: 2px solid red; */
+  }
+
+  .graphic > button {
+    text-align: center;
+    width: 12em;
+    background-color: #870de8;
+    outline: none;
+    /* border: none; */
+    border: 1px solid white;
+    transition: all 1s ease-in-out;
+  }
+  .graphic > button > a {
+    text-decoration: none;
+    padding: 5px 5px;
+    color: #fff;
+  }
+  #Service .navbar .lists {
+    display: flex;
+  }
+  .listandsign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn,
+  .btn2,
+  .btn3,
+  .btn4,
+  .btn5,
+  .btn6,
+  .btn7,
+  .btn10 {
+    padding: 10px 10px;
+    margin: 5px 1px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /*=======Button 6============= */
+  .btn6 {
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+
+  .btn6::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: #6098ff;
+    box-shadow: inset 0px 0px 0px #fff;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+
+  .btn6:hover::before {
+    width: 100%;
+  }
+
+  .btn6::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 0%;
+    height: 1px;
+    background: #777a7e;
+    transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
+  }
+  .btn6:hover::after {
+    width: 100%;
+  }
+  .btn6:hover {
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+  .section1 #bodysec .projects .button {
+    position: relative;
+    top: -100px;
+    /* border: 2px solid chartreuse; */
+    width: 40%;
+    margin: auto;
+    text-align: center;
+  }
+
+  #Service .navbar .lists > ul > li > a {
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .graphic1 {
+    /* position:absolute; */
+    position: relative;
+    top: -5em;
+    right: 0.8em;
+    /* border: 2px solid red; */
+  }
+  .graphic2 {
+    /* position:absolute; */
+    position: relative;
+    top: 0.5em;
+    left: 0.2em;
+    /* border: 2px solid red; */
+  }
+  .graphic3 {
     /* text-align:center; */
     top: -3em;
     left: 2.5em;
     /* border: 2px solid red; */
-}
+  }
 }

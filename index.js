@@ -1,3 +1,20 @@
+
+navbtn = document.querySelector('.fa-bars');
+navbtn.addEventListener('click', opennav)
+
+function opennav(){
+	list2  = document.querySelector('.lists2')
+	list2.classList.toggle('active')
+	
+	
+	document.querySelector(".blur").classList.add("active2")
+	document.querySelector(".blured1").addEventListener("click", function () {
+	});
+	
+}
+
+
+
 document.querySelector(".submit").addEventListener("click", function () {
 	document.querySelector(".popup").classList.add("active")
 });
@@ -51,3 +68,6 @@ document.querySelector(".blured3").addEventListener("click", function () {
 document.querySelector(".crosbtn").addEventListener("click", function () {
 	document.querySelector(".blur2").classList.remove("active23")
 });
+
+
+

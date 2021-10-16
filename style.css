@@ -1,23 +1,242 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    --box-size:125px;
-    --half-box:62.5px;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  --box-size: 125px;
+  --half-box: 62.5px;
 }
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction:column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 #box {
+  position: relative;
+  top: -20px;
+  width: 350px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(330deg);
+  animation: rotate 10s linear infinite;
+  -webkit-transform: rotateX(-30deg) rotateY(330deg);
+  -moz-transform: rotateX(-30deg) rotateY(330deg);
+  -ms-transform: rotateX(-30deg) rotateY(330deg);
+  -o-transform: rotateX(-30deg) rotateY(330deg);
+  -webkit-animation: rotate 10s linear infinite;
+}
+
+#box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.301);
+  filter: blur(15px);
+  transform: rotateX(90deg) translateZ(-220px);
+  -webkit-transform: rotateX(90deg) translateZ(-220px);
+  -moz-transform: rotateX(90deg) translateZ(-220px);
+  -ms-transform: rotateX(90deg) translateZ(-220px);
+  -o-transform: rotateX(90deg) translateZ(-220px);
+  -webkit-filter: blur(15px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(-30deg) rotateY(330deg);
+    -webkit-transform: rotateX(-30deg) rotateY(330deg);
+    -moz-transform: rotateX(-30deg) rotateY(330deg);
+    -ms-transform: rotateX(-30deg) rotateY(330deg);
+    -o-transform: rotateX(-30deg) rotateY(330deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(-30deg);
+    -webkit-transform: rotateX(-30deg) rotateY(-30deg);
+    -moz-transform: rotateX(-30deg) rotateY(-30deg);
+    -ms-transform: rotateX(-30deg) rotateY(-30deg);
+    -o-transform: rotateX(-30deg) rotateY(-30deg);
+  }
+}
+
+#box div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+#box div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box div span:nth-child(1) {
+  transform: rotateY(0deg) translate3d(0, 0, 175px);
+  background: #d8aa77;
+}
+
+#box div span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: url(./images/neologo-removebg-preview.png);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box div span:nth-child(2) {
+  transform: rotateY(90deg) translate3d(0, 0, 175px);
+  background: #684b2d;
+}
+
+#box div span:nth-child(2)::before {
+  content: "Graphic Design";
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 5px 5px 8px black;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(./icons/graphic-icon-png.png);
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: 50% 00%;
+  transform: translateY(-40%);
+}
+
+#box div span:nth-child(3) {
+  transform: rotateY(180deg) translate3d(0, 0, 175px);
+  background: #d8aa77;
+}
+
+#box div span:nth-child(3)::before {
+  content: "Web Development";
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 5px 5px 8px black;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(./icons/web-deve-png-new.png);
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: 50% 00%;
+  transform: translateY(-40%);
+  /* background: url(./oie_BNMTv44BPyYc-removebg-preview.png); */
+  /* background-size: 250px; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+}
+
+#box div span:nth-child(4) {
+  transform: rotateY(270deg) translate3d(0, 0, 175px);
+  background: #684b2d;
+  /* background: red; */
+}
+
+#box div span:nth-child(4)::before {
+  content: "Video Editing";
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 5px 5px 8px black;
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(./icons/video-editing-png.png);
+  background-size: 125px;
+  background-repeat: no-repeat;
+  background-position: 50% 00%;
+  transform: translateY(-40%);
+}
+
+#box div span:nth-child(5) {
+  transform: rotateX(270deg) translate3d(00px, 00px, -175px);
+  background: #e8bb84;
+}
+
+#box div span:nth-child(5):before {
+  content: "A Crew That Design your Needs";
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid grey; */
+  position: absolute;
+  /* background: url(./oie_1519621rtK6QOJe.jpg); */
+  /* background-size: 300px; */
+  /* background-repeat: no-repeat; */
+  /* transform: rotateZ(180deg); */
+  transform: rotateX(180deg);
+  position: absolute;
+  line-height: 1.3em;
+  font-size: 3em;
+  text-align: center;
+  margin-top: -50%;
+  color: black;
+  font-weight: bold;
+  text-shadow: 5px 5px 8px white;
+}
+.clickhere {
+  position: relative;
+  top: 130px;
+  text-align: center;
+  margin-top: 20px;
+}
+.clickhere > a {
+  font-size: 2em;
+  padding: 15px 80px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: purple;
+  border-radius: 15px;
+  border: 2px solid white;
+  transition: all 0.8s ease-in-out;
+}
+.clickhere > a:hover {
+  color: purple;
+  background-color: #fff;
+  border: 2px solid purple;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  #box {
     position: relative;
-    top: -20px;
-    width: 350px;
-    height: 350px;
+    width: 170px;
+    height: 170px;
     transform-style: preserve-3d;
     transform: rotateX(-30deg) rotateY(330deg);
     animation: rotate 10s linear infinite;
@@ -26,170 +245,125 @@ body {
     -ms-transform: rotateX(-30deg) rotateY(330deg);
     -o-transform: rotateX(-30deg) rotateY(330deg);
     -webkit-animation: rotate 10s linear infinite;
-}
-
-#box::before {
+  }
+  #box::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 350px;
-    height: 350px;
+    width: 150px;
+    height: 150px;
     background: rgba(0, 0, 0, 0.301);
     filter: blur(15px);
     transform: rotateX(90deg) translateZ(-220px);
-    -webkit-transform: rotateX(90deg) translateZ(-220px);
+    -webkit-transform: rotateX(90deg) translateZ(-120px);
     -moz-transform: rotateX(90deg) translateZ(-220px);
     -ms-transform: rotateX(90deg) translateZ(-220px);
     -o-transform: rotateX(90deg) translateZ(-220px);
     -webkit-filter: blur(15px);
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotateX(-30deg) rotateY(330deg);
-        -webkit-transform: rotateX(-30deg) rotateY(330deg);
-        -moz-transform: rotateX(-30deg) rotateY(330deg);
-        -ms-transform: rotateX(-30deg) rotateY(330deg);
-        -o-transform: rotateX(-30deg) rotateY(330deg);
-    }
-    100% {
-        transform: rotateX(-30deg) rotateY(-30deg);
-        -webkit-transform: rotateX(-30deg) rotateY(-30deg);
-        -moz-transform: rotateX(-30deg) rotateY(-30deg);
-        -ms-transform: rotateX(-30deg) rotateY(-30deg);
-        -o-transform: rotateX(-30deg) rotateY(-30deg);
-    }
-}
-
-#box div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-}
-
-#box div span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#box div span:nth-child(1) {
-    transform: rotateY(0deg) translate3d(0, 0, 175px);
+  }
+  #box div span:nth-child(1) {
+    transform: rotateY(0deg) translate3d(0, 0, 85px);
     background: #d8aa77;
-    
-}
+  }
 
-#box div span:nth-child(1)::before {
+  #box div span:nth-child(1)::before {
     content: "";
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: url(./images/neologo-removebg-preview.png);
-    background-size: 300px;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg.png);
+    background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
-}
+  }
 
-#box div span:nth-child(2) {
-    transform: rotateY(90deg) translate3d(0, 0, 175px);
+  #box div span:nth-child(2) {
+    transform: rotateY(90deg) translate3d(0, 0, 85px);
     background: #684b2d;
-}
+  }
 
-#box div span:nth-child(2)::before {
+  #box div span:nth-child(2)::before {
+    /* background: red; */
     content: "Graphic Design";
-    font-size: 2.5em;
-    color:white;
+    font-size: 1.5em;
+    color: white;
     text-shadow: 5px 5px 8px black;
     position: absolute;
-    top: 60%;
+    top: 50%;
     text-align: center;
     width: 100%;
     height: 300px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: url(./icons/graphic-icon-png.png);
-    background-size:125px;
+    background-size: 80px;
     background-repeat: no-repeat;
-    background-position: 50% 00%;
-    transform: translateY(-40%);
-}
+    background-position: 50% 20%;
+    transform: translateY(-35%);
+  }
 
-#box div span:nth-child(3) {
-    transform: rotateY(180deg) translate3d(0, 0, 175px);
+  #box div span:nth-child(3) {
+    transform: rotateY(180deg) translate3d(0, 0, 85px);
     background: #d8aa77;
-}
+  }
 
-#box div span:nth-child(3)::before {
+  #box div span:nth-child(3)::before {
     content: "Web Development";
-    font-size: 2.5em;
-    color:white;
+    font-size: 1.5em;
+    color: white;
     text-shadow: 5px 5px 8px black;
     position: absolute;
-    top: 60%;
+    top: 55%;
     text-align: center;
     width: 100%;
     height: 300px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: url(./icons/web-deve-png-new.png);
-    background-size:125px;
+    background-size: 80px;
     background-repeat: no-repeat;
-    background-position: 50% 00%;
-    transform: translateY(-40%); 
-    /* background: url(./oie_BNMTv44BPyYc-removebg-preview.png); */
-    /* background-size: 250px; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-}
+    background-position: 50% 20%;
+    transform: translateY(-40%);
+  }
 
-#box div span:nth-child(4) {
-    transform: rotateY(270deg) translate3d(0, 0, 175px);
+  #box div span:nth-child(4) {
+    transform: rotateY(270deg) translate3d(0, 0, 85px);
     background: #684b2d;
     /* background: red; */
-}
+  }
 
-#box div span:nth-child(4)::before {
+  #box div span:nth-child(4)::before {
     content: "Video Editing";
-    font-size: 2.5em;
-    color:white;
+    font-size: 1.5em;
+    color: white;
     text-shadow: 5px 5px 8px black;
     position: absolute;
     top: 60%;
     text-align: center;
     width: 100%;
     height: 300px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: url(./icons/video-editing-png.png);
-    background-size:125px;
+    background-size: 85px;
     background-repeat: no-repeat;
-    background-position: 50% 00%;
-    transform: translateY(-40%); 
-}
+    background-position: 50% 25%;
+    transform: translateY(-40%);
+  }
 
-#box div span:nth-child(5) {
-    transform: rotateX(270deg) translate3d(00px, 00px, -175px);
+  #box div span:nth-child(5) {
+    transform: rotateX(270deg) translate3d(00px, 00px, -85px);
     background: #e8bb84;
-}
+  }
 
-#box div span:nth-child(5):before {
+  #box div span:nth-child(5):before {
     content: "A Crew That Design your Needs";
     width: 100%;
     height: 100%;
@@ -201,214 +375,35 @@ body {
     /* transform: rotateZ(180deg); */
     transform: rotateX(180deg);
     position: absolute;
-    line-height:1.3em;
-    font-size:3em;
+    line-height: 1.5em;
+    width: 90%;
+    font-size: 1.5em;
     text-align: center;
-    margin-top:-50%;
-    color:black;
+    margin-top: -40%;
+    color: black;
     font-weight: bold;
     text-shadow: 5px 5px 8px white;
-}
-.clickhere{
-    position:relative;
+  }
+  .clickhere {
+    position: relative;
     top: 130px;
     text-align: center;
-    margin-top:20px;
-}
-.clickhere>a{
-    font-size: 2em;
-    padding:15px 80px;
+    margin-top: 20px;
+  }
+  .clickhere > a {
+    font-size: 1em;
+    padding: 15px 40px;
     font-weight: bold;
     text-decoration: none;
     color: white;
     background-color: purple;
-    border-radius:15px;
+    border-radius: 15px;
     border: 2px solid white;
-    transition: all .8s ease-in-out;
-}
-.clickhere>a:hover{
+    transition: all 0.8s ease-in-out;
+  }
+  .clickhere > a:hover {
     color: purple;
     background-color: #fff;
     border: 2px solid purple;
-}
-
-
-@media screen and (min-width:100px)and (max-width:500px){
-    #box {
-        position: relative;
-        width: 170px;
-        height: 170px;
-        transform-style: preserve-3d;
-        transform: rotateX(-30deg) rotateY(330deg);
-        animation: rotate 10s linear infinite;
-        -webkit-transform: rotateX(-30deg) rotateY(330deg);
-        -moz-transform: rotateX(-30deg) rotateY(330deg);
-        -ms-transform: rotateX(-30deg) rotateY(330deg);
-        -o-transform: rotateX(-30deg) rotateY(330deg);
-        -webkit-animation: rotate 10s linear infinite;
-    }
-    #box::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 150px;
-        height: 150px;
-       background: rgba(0, 0, 0, 0.301);
-        filter: blur(15px);
-        transform: rotateX(90deg) translateZ(-220px);
-        -webkit-transform: rotateX(90deg) translateZ(-120px);
-        -moz-transform: rotateX(90deg) translateZ(-220px);
-        -ms-transform: rotateX(90deg) translateZ(-220px);
-        -o-transform: rotateX(90deg) translateZ(-220px);
-        -webkit-filter: blur(15px);
-    }
-    #box div span:nth-child(1) {
-        transform: rotateY(0deg) translate3d(0, 0, 85px);
-        background: #d8aa77;
-        
-    }
-    
-    #box div span:nth-child(1)::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(../images/bg.png);
-        background-size: 150px;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    
-    #box div span:nth-child(2) {
-        transform: rotateY(90deg) translate3d(0, 0, 85px);
-        background: #684b2d;
-    }
-    
-    #box div span:nth-child(2)::before {
-        /* background: red; */
-        content: "Graphic Design";
-        font-size: 1.5em;
-        color:white;
-        text-shadow: 5px 5px 8px black;
-        position: absolute;
-        top: 50%;
-        text-align: center;
-        width: 100%;
-        height: 300px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: url(./icons/graphic-icon-png.png);
-        background-size:80px;
-        background-repeat: no-repeat;
-        background-position: 50% 20%;
-        transform: translateY(-35%);
-    }
-    
-    #box div span:nth-child(3) {
-        transform: rotateY(180deg) translate3d(0, 0, 85px);
-        background: #d8aa77;
-    }
-    
-    #box div span:nth-child(3)::before {
-        content: "Web Development";
-    font-size: 1.5em;
-    color:white;
-    text-shadow: 5px 5px 8px black;
-    position: absolute;
-    top: 55%;
-    text-align: center;
-    width: 100%;
-    height: 300px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: url(./icons/web-deve-png-new.png);
-    background-size:80px;
-    background-repeat: no-repeat;
-    background-position: 50% 20%;
-    transform: translateY(-40%);
-    }
-    
-    #box div span:nth-child(4) {
-        transform: rotateY(270deg) translate3d(0, 0, 85px);
-        background: #684b2d;
-        /* background: red; */
-    }
-    
-    #box div span:nth-child(4)::before {
-        content: "Video Editing";
-        font-size: 1.5em;
-        color:white;
-        text-shadow: 5px 5px 8px black;
-        position: absolute;
-        top: 60%;
-        text-align: center;
-        width: 100%;
-        height: 300px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: url(./icons/video-editing-png.png);
-        background-size:85px;
-        background-repeat: no-repeat;
-        background-position: 50% 25%;
-        transform: translateY(-40%);
-    }
-    
-    #box div span:nth-child(5) {
-        transform: rotateX(270deg) translate3d(00px, 00px, -85px);
-        background: #e8bb84;
-    }
-    
-    #box div span:nth-child(5):before {
-        content: "A Crew That Design your Needs";
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid grey; */
-    position: absolute;
-    /* background: url(./oie_1519621rtK6QOJe.jpg); */
-    /* background-size: 300px; */
-    /* background-repeat: no-repeat; */
-    /* transform: rotateZ(180deg); */
-    transform: rotateX(180deg);
-    position: absolute;
-    line-height:1.5em;
-    width: 90%;
-    font-size:1.5em;
-    text-align: center;
-    margin-top:-40%;
-    color:black;
-    font-weight: bold;
-    text-shadow: 5px 5px 8px white;
-    }
-    .clickhere{
-        position:relative;
-        top: 130px;
-        text-align: center;
-        margin-top:20px;
-    }
-    .clickhere>a{
-        font-size: 1em;
-        padding:15px 40px;
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        background-color: purple;
-        border-radius:15px;
-        border: 2px solid white;
-        transition: all .8s ease-in-out;
-    }
-    .clickhere>a:hover{
-        color: purple;
-        background-color: #fff;
-        border: 2px solid purple;
-    }
-    
-    
-    
+  }
 }
